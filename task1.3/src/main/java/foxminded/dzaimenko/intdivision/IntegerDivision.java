@@ -2,10 +2,22 @@ package foxminded.dzaimenko.intdivision;
 
 import java.util.Scanner;
 
-public class IntegerDivisor {
+public class IntegerDivision {
     private int dividend;
     private int divisor;
     private int divisionResult;
+
+    public int getDividend() {
+        return dividend;
+    }
+
+    public int getDivisor() {
+        return divisor;
+    }
+
+    public int getDivisionResult() {
+        return divisionResult;
+    }
 
     private void initDividend(Scanner scanner) {
 
@@ -16,7 +28,7 @@ public class IntegerDivisor {
                 System.out.println("The entered number is not an integer");
                 scanner.next();
             } else {
-                dividend = scanner.nextInt();
+                dividend = Math.abs(scanner.nextInt());
                 break;
             }
         }
@@ -31,7 +43,7 @@ public class IntegerDivisor {
                 System.out.println("The entered number is not an integer");
                 scanner.next();
             } else {
-                divisor = scanner.nextInt();
+                divisor = Math.abs(scanner.nextInt());
                 if (divisor == 0) {
                     System.out.println("The divisor cannot be equal to zero");
                 } else {
@@ -53,8 +65,7 @@ public class IntegerDivisor {
         initDivisionResult();
 
         scanner.close();
+        System.out.println();
 
-        System.out.println("Result of the division: ");
-        System.out.println(divisionResult);
     }
 }
