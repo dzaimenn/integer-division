@@ -43,11 +43,18 @@ public class IntegerDivision {
                 System.out.println("The entered number is not an integer");
                 scanner.next();
             } else {
-                divisor = Math.abs(scanner.nextInt());
-                if (divisor == 0) {
-                    System.out.println("The divisor cannot be equal to zero");
+                int potentialDivisor = scanner.nextInt();
+
+                if (dividend < potentialDivisor) {
+                    System.out.println("The divisor must not be greater than the dividend");
                 } else {
-                    break;
+                    divisor = Math.abs(potentialDivisor);
+
+                    if (divisor == 0) {
+                        System.out.println("The divisor cannot be equal to zero");
+                    } else {
+                        break;
+                    }
                 }
             }
         }

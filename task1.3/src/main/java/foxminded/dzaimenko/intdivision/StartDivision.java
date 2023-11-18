@@ -1,6 +1,6 @@
 package foxminded.dzaimenko.intdivision;
 
-public class Main {
+public class StartDivision {
     public static void main(String[] args) {
 
         IntegerDivision integer = new IntegerDivision();
@@ -8,7 +8,6 @@ public class Main {
 
         RenderDivision render = new RenderDivision(integer.getDividend(), integer.getDivisor(), integer.getDivisionResult());
         render.renderDivisionResult();
-
 
     }
 }
