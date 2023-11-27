@@ -4,10 +4,7 @@ public class StartDivision {
     public static void main(String[] args) {
 
         IntegerDivision integer = new IntegerDivision();
-        integer.performDivision();
-
-        RenderDivision render = new RenderDivision(integer.getDividend(), integer.getDivisor(), integer.getDivisionResult());
-        render.renderDivisionResult();
+        integer.performDivision(78945, 4);
 
     }
 }

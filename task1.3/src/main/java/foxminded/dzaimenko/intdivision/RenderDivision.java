@@ -11,16 +11,20 @@ public class RenderDivision {
     private int numberOfDigitsInResult;
     int count;
 
-    public RenderDivision(int dividend, int divisor, int divisionResult) {
-        this.dividend = dividend;
-        this.divisor = divisor;
-        this.divisionResult = divisionResult;
+    public RenderDivision(int dividend, int divisor) {
+        this.dividend = Math.abs(dividend);
+        this.divisor = Math.abs(divisor);
+        initFields();
+
+    }
+
+    private void initFields() {
+        this.divisionResult = dividend / divisor;
         this.stringDividend = Integer.toString(dividend);
         this.stringDivisor = Integer.toString(divisor);
         this.arrayDividend = stringDividend.toCharArray();
         this.numberOfDigitsInResult = String.valueOf(divisionResult).length();
         this.count = stringDividend.length() - stringDivisor.length();
-
     }
 
     private void renderDivisionHeader() {
